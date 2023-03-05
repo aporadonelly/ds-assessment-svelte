@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Mango",
+        "imgSrc": "uploads/nouns/Mango/mango.jpeg",
+        "createdAt": "2023-03-01T00:53:56.606Z",
+        "updatedAt": "2023-03-01T00:53:56.606Z",
+        "deleted": false
+    },
+    {
+        "id": 2,
+        "name": "Apple",
+        "imgSrc": "uploads/nouns/Apple/apple.jpeg",
+        "createdAt": "2023-03-01T00:54:10.200Z",
+        "updatedAt": "2023-03-01T00:54:10.200Z",
+        "deleted": false
+    },
+    {
+        "id": 3,
+        "name": "Kiwi",
+        "imgSrc": "uploads/nouns/Kiwi/kiwi.webp",
+        "createdAt": "2023-03-01T00:54:18.081Z",
+        "updatedAt": "2023-03-01T00:54:18.081Z",
+        "deleted": false
+    },
+    {
+        "id": 4,
+        "name": "Banana",
+        "imgSrc": "uploads/nouns/Banana/banana.jpeg",
+        "createdAt": "2023-03-03T15:40:23.598Z",
+        "updatedAt": "2023-03-03T15:40:23.598Z",
+        "deleted": false
+    }
+]
