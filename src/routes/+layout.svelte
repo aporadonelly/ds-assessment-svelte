@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { LayoutData } from "./$types";
   import { page } from "$app/stores";
-  import { invalidateAll } from "$app/navigation";
+  import { goto, invalidateAll } from "$app/navigation";
+  import { redirect } from "@sveltejs/kit";
 
   export let data: LayoutData;
 </script>
@@ -18,16 +19,8 @@
 </nav>
 
 {#if data.user}
-  <a href="/">Home</a>
-  <button
-    on:click={async () => {
-      const res = await fetch("/api/logout", {
-        method: "POST",
-      });
-      if (res.ok) {
-        invalidateAll();
-      }
-    }}>Logout</button
-  >
+  <form action="/login?/logout">
+    <button type="submit">Logout</button>
+  </form>
 {/if}
 <slot />

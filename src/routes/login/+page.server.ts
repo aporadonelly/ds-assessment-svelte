@@ -1,8 +1,8 @@
-import { fail, error, type Actions } from '@sveltejs/kit';
+import { fail, error, typeActions, redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const actions: Actions ={
-    default: async ({request, cookies }) => {
+    login: async ({request, cookies }) => {
         const form = await request.formData()
 
         const homeroomName = form.get('homeroomName')
@@ -20,8 +20,14 @@ export const actions: Actions ={
         })
 
         return {success: true}
+        // throw redirect(303, '/')
 
+    },
+    logout:     ({cookies}) => {
+        cookies.delete('token', {path: "/"})
+        throw redirect(303, '/login')
     }
+
 }
 export const load: PageServerLoad =  async ({fetch}) => {
     const response = await fetch('api/nouns')

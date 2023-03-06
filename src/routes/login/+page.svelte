@@ -42,9 +42,9 @@
   };
 </script>
 
-{#if form?.success}
+<!-- {#if form?.success}
   <p style="color: green">Conference will start soon....</p>
-{/if}
+{/if} -->
 
 <div class="container">
   <div class="form">
@@ -55,6 +55,7 @@
         id="homeroomName"
         name="homeroomName"
         placeholder="Homeroom name"
+        style="text-align: left"
       />
       {#if form?.homeroomNameMissing}
         <p style="color: red; margin-bottom:0%">Homeroom name is required</p>
@@ -65,6 +66,7 @@
         id="studentNo"
         name="studentNo"
         placeholder="Student Number"
+        style="text-align: left"
       />
       {#if form?.studentNoMissing}
         <p style="color: red; margin-bottom:0%">Student number is required</p>
@@ -84,13 +86,13 @@
 </div>
 
 <style lang="scss">
-  @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
 
   $background-color: #d7ccc8;
-  $font-family: "Roboto", sans-serif;
+  $font-family: "Abel", sans-serif;
 
   @mixin btn($fontcolor: #fafafa) {
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     font-size: 15px;
     outline: 0;
     border: 0;
@@ -104,7 +106,7 @@
   @mixin message($fontcolor: #90a4ae) {
     color: $fontcolor;
     text-align: center;
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     font-size: 14px;
   }
 
@@ -161,5 +163,11 @@
   img {
     width: 100px;
     height: 100px;
+  }
+  p {
+    color: red;
+    font-family: $font-family;
+    margin-top: -15px;
+    margin-bottom: 50px;
   }
 </style>
